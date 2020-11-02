@@ -16,6 +16,10 @@
   box-sizing: border-box;
   font-family: "Ambit_normal";
 }
+button:hover {
+  color: chocolate;
+}
+
 .container {
   padding-right: 0;
   padding-left: 0;
@@ -28,6 +32,7 @@
   height: 100vh;
 
   background-image: url(../img/main.png);
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
@@ -42,6 +47,7 @@ header {
   width: 201.48px;
   height: 63px;
   background-image: url(../img/logo.png);
+  background-position: center;
   background-size: 97%;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,7 +77,6 @@ header {
 }
 .main_page {
   display: flex;
-  margin-top: 143px;
 }
 .main_info,
 .main_img,
@@ -119,13 +124,14 @@ button {
   margin-top: 82px;
   text-align: center;
 }
-.main_button h5 {
+.main_button p {
   font-family: "Ambit_bolt";
 }
 .main_img {
   max-width: 782px;
   height: 537px;
   background-image: url(../img/casino.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -140,6 +146,10 @@ button {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
+}
+.arrow {
+  position: relative;
+  bottom: 0;
 }
 /*********************************/
 .grey {
@@ -209,7 +219,7 @@ button {
   position: absolute;
   bottom: 0px;
 }
-.casino_button p {
+.casino_button a {
   font-weight: bold;
   font-size: 30px;
 }
@@ -338,21 +348,27 @@ button {
 }
 .game_millionaire {
   background-image: url(../img/millionaire.png);
+  background-position: center;
 }
 .game_moolah {
   background-image: url(../img/mega.png);
+  background-position: center;
 }
 .game_atlantean {
   background-image: url(../img/atlantean.png);
+  background-position: center;
 }
 .game_9pots {
   background-image: url(../img/9pots.png);
+  background-position: center;
 }
 .game_bookofra {
   background-image: url(../img/bookofRa.png);
+  background-position: center;
 }
 .game_immortal {
   background-image: url(../img/Immortal.png);
+  background-position: center;
 }
 
 /******************************/
@@ -402,6 +418,7 @@ button {
   color: #fff;
   opacity: 0.5;
   outline: none;
+  background-color: inherit;
 }
 .sign_up button {
   width: 345px;
@@ -696,7 +713,7 @@ button {
     max-width: 700px;
     height: 75px;
   }
-  .main_button h5 {
+  .main_button p {
     font-size: 40px;
   }
   .row {
@@ -773,16 +790,20 @@ button {
     font-size: 48px;
     text-align: left;
   }
+  .scroll {
+    bottom: 50px;
+  }
   .main_info h4,
   h3 {
     text-align: left;
   }
 
   .main_button {
-    width: 469px;
+    width: 469px !important;
     height: 87px;
     margin-top: 82px;
     text-align: center;
+    font-size: 30px;
   }
 
   .main_img {
@@ -942,24 +963,75 @@ button {
   .main_page {
     margin-top: 143px;
   }
+  .logo {
+    width: 213px;
+    height: 64px;
+  }
+  .menu {
+    position: relative;
+    right: -9px;
+    width: 44px;
+    height: 35px;
+    margin-top: 32px;
+  }
+  .line {
+    width: 44px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    margin-top: -24px;
+  }
 
+  .line1 {
+    transform: translateY(15px);
+  }
+  .line4 {
+    transform: translateY(-15px);
+  }
   .main_info {
-    padding-left: 75px;
+    padding-left: 65px;
+  }
+  .main_info h1 {
+    font-size: 72px;
+    margin-top: 38px;
+    font-weight: bolder;
   }
   .main_info h1 {
     margin-bottom: 51px;
   }
+  .main_info h4 {
+    margin-top: -5px;
+    margin-left: 12px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .main_info h3 {
+    font-style: normal;
+    margin-top: 15px;
+    margin-left: 9px;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 62px;
+  }
 
   .main_button {
-    width: 469px;
-    height: 87px;
-    margin-top: 82px;
+    width: 469px !important;
+    height: 90px !important;
+    margin-top: 68px !important;
     text-align: center;
+  }
+  .main_button a {
+    font-size: 30px !important;
   }
 
   .main_img {
-    max-width: 782px;
+    width: 782px;
     height: 537px;
+    position: relative;
+    right: 75px;
+    bottom: 25px;
   }
 
   /*********************************/
@@ -1017,7 +1089,7 @@ button {
     position: absolute;
     bottom: 0px;
   }
-  .casino_button p {
+  .casino_button a {
     font-size: 30px;
   }
   .casino_rating h4 {
