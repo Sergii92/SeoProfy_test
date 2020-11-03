@@ -12,6 +12,7 @@
     />
 
     <link href="CSS/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <section class="main_section">
@@ -48,9 +49,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="scroll">
+          <div class="scroll" id="scroll">
             <div class="arrow">
-              <img src="./img/arow.png" alt="" />
+              <img src="./img/arow.png" alt="arow" />
             </div>
             <h5>scroll down</h5>
           </div>
@@ -69,7 +70,7 @@
           <div class="casino_list">
             <div class="casino">
               <div class="casino_logo">
-                <img src="/img/gold_casino.png" alt="" />
+                <img src="img/gold_casino.png" alt="gold_casino" />
               </div>
               <div class="casino_description">
                 <div class="name">
@@ -83,13 +84,13 @@
               <div class="casino_rating">
                 <h4>RATING</h4>
                 <div class="stars">
-                  <img src="/img/rating1.png" alt="" />
+                  <img src="img/rating1.png" alt="rating" />
                 </div>
               </div>
             </div>
             <div class="casino">
               <div class="casino_logo">
-                <img src="/img/villento_casino.png" alt="" />
+                <img src="img/villento_casino.png" alt="villento_casino" />
               </div>
               <div class="casino_description">
                 <div class="name">
@@ -103,13 +104,13 @@
               <div class="casino_rating">
                 <h4>RATING</h4>
                 <div class="stars">
-                  <img src="/img/rating2.png" alt="" />
+                  <img src="img/rating2.png" alt="rating" />
                 </div>
               </div>
             </div>
             <div class="casino">
               <div class="casino_logo">
-                <img src="/img/luxury_casino.png" alt="" />
+                <img src="img/luxury_casino.png" alt="luxury_casino" />
               </div>
               <div class="casino_description">
                 <div class="name">
@@ -123,7 +124,7 @@
               <div class="casino_rating">
                 <h4>RATING</h4>
                 <div class="stars">
-                  <img src="/img/rating3.png" alt="" />
+                  <img src="img/rating3.png" alt="rating" />
                 </div>
               </div>
             </div>
@@ -131,7 +132,7 @@
         </div>
         <div class="row">
           <div class="cube">
-            <img src="/img/cube.png" alt="" />
+            <img src="img/cube.png" alt="cube" />
           </div>
           <div class="title">
             <p>Yukon Gold Casino</p>
@@ -154,24 +155,24 @@
             <div class="col-7">
               <div class="game_info">
                 <div class="game_img">
-                  <img src="/img/gold_casino_big.png" alt="" />
+                  <img src="img/gold_casino_big.png" alt="gold_casino_img" />
                 </div>
                 <p>Deposit Methods:</p>
                 <div class="payment">
                   <div class="visa">
-                    <img src="/img/visa.png" alt="" />
+                    <img src="img/visa.png" alt="visa" />
                   </div>
                   <div class="mastercard">
-                    <img src="/img/mastercard.png" alt="" />
+                    <img src="img/mastercard.png" alt="mastercard" />
                   </div>
                   <div class="idebit">
-                    <img src="/img/debit.png" alt="" />
+                    <img src="img/debit.png" alt="debit" />
                   </div>
                   <div class="echeck">
-                    <img src="/img/echeck.png" alt="" />
+                    <img src="img/echeck.png" alt="echeck" />
                   </div>
                   <div class="applepay">
-                    <img src="/img/pay.png" alt="" />
+                    <img src="img/pay.png" alt="applePay" />
                   </div>
                 </div>
               </div>
@@ -260,5 +261,16 @@
         <p>(c) 2020 Betting Nirvana</p>
       </div>
     </footer>
+    <script>
+      $("#scroll").click(function () {
+        // ID откуда кливаем
+        $("html, body").animate(
+          {
+            scrollTop: $(".grey").offset().top, // класс объекта к которому приезжаем
+          },
+          1000
+        ); // Скорость прокрутки
+      });
+    </script>
   </body>
 </html>

@@ -16,7 +16,10 @@
   box-sizing: border-box;
   font-family: "Ambit_normal";
 }
-button:hover {
+
+.game button:hover,
+button:hover,
+.sign_up_btn:hover {
   color: chocolate;
 }
 
@@ -30,7 +33,6 @@ button:hover {
 }
 .main_section {
   height: 100vh;
-
   background-image: url(../img/main.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -58,6 +60,7 @@ header {
   width: 44px;
   height: 35px;
   margin-top: 11px;
+  cursor: pointer;
 }
 .line {
   width: 44px;
@@ -146,10 +149,11 @@ button {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
+  cursor: pointer;
 }
 .arrow {
   position: relative;
-  bottom: 0;
+  bottom: -2px;
 }
 /*********************************/
 .grey {
@@ -458,10 +462,19 @@ button {
     margin-top: 30px;
     width: 100%;
   }
+  .main_img {
+    display: none;
+  }
   .main_info h1 {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 30px;
     text-align: center;
+  }
+  .main_info h4 {
+    font-size: 20px;
+  }
+  .main_info h3 {
+    font-size: 22px;
   }
   .main_page .col-7,
   .col-5 {
@@ -472,10 +485,7 @@ button {
     width: 100%;
     padding-left: 0;
   }
-  .main_info h4,
-  h3 {
-    display: none;
-  }
+
   .main_info button {
     margin-top: 10px;
     width: 90%;
@@ -705,6 +715,9 @@ button {
     width: 100%;
     padding-left: 0;
   }
+  .main_img {
+    display: block;
+  }
 
   .main_info button {
     margin-top: 10px;
@@ -781,7 +794,9 @@ button {
     display: flex;
     margin-top: 73px;
   }
-
+  .main_img {
+    display: block;
+  }
   .main_info {
     padding-left: 0px;
   }
@@ -945,6 +960,12 @@ button {
 
   .sign_up input {
     margin-right: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .game {
+    width: 550px;
+    height: 400px;
   }
 }
 @media (min-width: 1440px) {
